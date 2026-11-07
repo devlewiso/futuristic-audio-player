@@ -1,0 +1,13 @@
+{
+  "name": "Futuristic Player",
+  "short_name": "Player",
+  "description": "Tu música sin anuncios: archivos de tu compu o tu celular, con visualizador.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#06070B",
+  "theme_color": "#06070B",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

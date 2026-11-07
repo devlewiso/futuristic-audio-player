@@ -1,58 +1,28 @@
-Futuristic Audio Player with Visualizer
+# Futuristic Player
 
-Descripción
+Reproductor de música **sin anuncios** que corre en el navegador. Abrí canciones de tu compu o de tu celular Android
+y escuchalas con visualizador, lista y controles en la pantalla de bloqueo. Nada se sube a ningún servidor.
 
-Este proyecto es un reproductor de audio futurista con visualizador, que permite a los usuarios cargar archivos de audio, reproducirlos y visualizar la forma de onda en tiempo real. Cuenta con una interfaz moderna y controles intuitivos para mejorar la experiencia del usuario.
+## Qué hace
 
-Características
+- **Abrir música**: botón «Agregar canciones» (en Android abre tus archivos o la carpeta Música), «Carpeta completa»
+  en la compu, o arrastrar y soltar archivos o carpetas.
+- **Formatos**: MP3, M4A/AAC, FLAC, OGG/Opus, WAV (lo que soporte el navegador).
+- **Etiquetas ID3**: toma título, artista y portada del archivo.
+- **Lista**: buscar, quitar, aleatorio, repetir lista o canción. Queda **guardada en el navegador** (IndexedDB),
+  así que al volver a abrir la app tus canciones siguen ahí.
+- **Visualizador** en tiempo real (Web Audio): anillo, barras u onda.
+- **Pantalla de bloqueo y audífonos**: play/pausa, siguiente y anterior con Media Session.
+- **App instalable (PWA)**: en Android, menú de Chrome → «Instalar app». Abre sin internet.
+- **Teclado**: espacio play/pausa · ← → ±10 s · N/P siguiente/anterior · S aleatorio · R repetir · M silencio.
+- Responsive, modo oscuro OLED, respeta «reducir movimiento».
 
-Carga de archivos de audio locales.
+## Usar
 
-Controles de reproducción (play, pausa, anterior, siguiente).
+Es estático: `index.html`, `sw.js`, `manifest.webmanifest`, `icon.svg`. Servilo con cualquier servidor
+(`python3 -m http.server 3402`) o publicalo en cualquier hosting con HTTPS (el service worker y la instalación
+necesitan HTTPS o `localhost`).
 
-Visualización en tiempo real con un canvas.
+## Licencia
 
-Lista de reproducción interactiva.
-
-Modo oscuro para una mejor experiencia visual.
-
-Tecnologías Utilizadas
-
-HTML5: Estructura de la aplicación.
-
-CSS3: Estilos modernos y adaptativos.
-
-JavaScript (ES6): Manipulación del DOM y control de audio.
-
-Canvas API: Renderizado de la visualización de audio en tiempo real.
-
-Uso
-
-Abre el archivo index.html en un navegador web compatible.
-
-Carga un archivo de audio usando el botón Select Audio File.
-
-Utiliza los controles de reproducción para gestionar la música.
-
-Observa la representación visual del audio en el canvas.
-
-Agrega varios archivos a la lista de reproducción y selecciona canciones desde ella.
-
-Alterna entre el modo oscuro y claro con el botón de Dark Mode.
-
-Personalización
-
-Puedes modificar los estilos en la sección <style> del archivo index.html. Para ajustar la visualización del audio, puedes editar la lógica en la sección <script>.
-
-Contribución
-
-Las contribuciones son bienvenidas. Si deseas mejorar la funcionalidad o corregir errores, envía un pull request.
-
-Licencia
-
-Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo libremente.
-
-Contacto
-
-Para consultas o sugerencias, puedes contactarme a través de mi perfil de GitHub: devlewiso.
-
+MIT

@@ -488,8 +488,8 @@
   }
   function anterior() { if (audio.currentTime > 3) { audio.currentTime = 0; return; } paso(-1); }
 
-  audio.addEventListener('play', () => { $('player').classList.replace('paused', 'playing'); $('icoPlay').hidden = true; $('icoPause').hidden = false; $('play').setAttribute('aria-label', 'Pausa'); document.body.classList.remove('paused'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; });
-  audio.addEventListener('pause', () => { $('player').classList.replace('playing', 'paused'); $('icoPlay').hidden = false; $('icoPause').hidden = true; $('play').setAttribute('aria-label', 'Reproducir'); document.body.classList.add('paused'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; });
+  audio.addEventListener('play', () => { $('player').classList.replace('paused', 'playing'); $('icoPlay').toggleAttribute('hidden', true); $('icoPause').toggleAttribute('hidden', false); $('play').setAttribute('aria-label', 'Pausa'); document.body.classList.remove('paused'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; });
+  audio.addEventListener('pause', () => { $('player').classList.replace('playing', 'paused'); $('icoPlay').toggleAttribute('hidden', false); $('icoPause').toggleAttribute('hidden', true); $('play').setAttribute('aria-label', 'Reproducir'); document.body.classList.add('paused'); if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; });
   audio.addEventListener('ended', () => { if (state.repeat === 'one') { audio.currentTime = 0; play(); } else paso(1); });
   audio.addEventListener('loadedmetadata', () => { $('tot').textContent = fmt(audio.duration); });
   let arrastrando = false;

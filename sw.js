@@ -1,5 +1,5 @@
 // Guarda la app para que abra sin internet. Las canciones viven en IndexedDB, no aquí.
-const CACHE = 'futuristic-player-v2';
+const CACHE = 'futuristic-player-v3';
 const ARCHIVOS = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ARCHIVOS))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => {

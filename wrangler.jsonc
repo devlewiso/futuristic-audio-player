@@ -1,0 +1,13 @@
+// Sitio estático servido por Cloudflare Workers.
+// Deploy: npx wrangler deploy
+{
+  "name": "futuristic-player",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [
+    { "pattern": "player.neuralcodelab.com", "custom_domain": true }
+  ]
+}
